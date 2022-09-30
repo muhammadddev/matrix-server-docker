@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  synapse:
+    image: "matrixdotorg/synapse:latest"
+    container_name: "synapse"
+    volumes:
+      - "./data:/data"
+    environment:
+      SYNAPSE_SERVER_NAME: "sub.domain.com"
+      SYNAPSE_REPORT_STATS: "yes"
+    ports:
+      - "8008:8008"
